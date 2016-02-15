@@ -12,7 +12,7 @@ var Dog = db.define( 'dog', {
     type: Sequelize.STRING
   },
   zip: {
-    type: Sequelize.NUMBER
+    type: Sequelize.INTEGER
   },
   email: {
     type: Sequelize.STRING
@@ -20,6 +20,8 @@ var Dog = db.define( 'dog', {
   phone: {
     type: Sequelize.STRING
   }
-} );
+});
 
-model.exports = Dog;
+Dog.sync();
+
+module.exports = Dog;
