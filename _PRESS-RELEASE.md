@@ -16,29 +16,37 @@ Oh, and I also like to write press-releases in what I call "Oprah-speak" for mai
 Once the project moves into development, the press release can be used as a touchstone; a guiding light. The product team can ask themselves, "Are we building what is in the press release?" If they find they're spending time building things that aren't in the press release (overbuilding), they need to ask themselves why. This keeps product development focused on achieving the customer benefits and not building extraneous stuff that takes longer to build, takes resources to maintain, and doesn't provide real customer benefit (at least not enough to warrant inclusion in the press release).
  -->
  
-## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+<!-- ## Heading ##
+  > Name the product in a way the reader (i.e. your target customers) will understand. -->
+# New App Encourages Dog Owners To Be Social
+<!-- ## Sub-Heading ##
+  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title. -->
+## Barkr connects your friendly dog with other friendly dogs
 
-## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+<!-- ## Summary ##
+  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good. -->
+### What's It About?
+Barkr encourages responsible dog ownership through socialization. Barkr matches you with other dog owners, and suggests playdates at local dog parks.
+<!-- ## Problem ##
+  > Describe the problem your product solves. -->
+Dogs, like humans, are social creatures, and typically enjoy the companionship of others. Sometimes it is hard to get motivated to go to the dog park so that your dog can interact with other dogs. Also, there are not enough pictures of fluffy dogs in the world.
 
-## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+<!-- ## Solution ##
+  > Describe how your product elegantly solves the problem. -->
+Primarily, our app allows you to look at pictures of cute doggies. Our app also solves the motivation problem by adding an element of social accountability. When you match your dog with another dog, you are given suggestions for a local dog park and asked to contact the other dog owner to set up a playdate.
 
-## Problem ##
-  > Describe the problem your product solves.
+<!-- ## Quote from You ##
+  > A quote from a spokesperson in your company. -->
+"Everyone is better off with more dogs and dog pictures." -- Jake, probably
 
-## Solution ##
-  > Describe how your product elegantly solves the problem.
+<!-- ## How to Get Started ##
+  > Describe how easy it is to get started. -->
+Simply sign up online, and upload a picture of your dog. Tell us what your pet's favorite toys and activities are, and give us your zipcode. We'll show you pictures and profiles of nearby dogs and let you decide which ones you think will be a good fit for your pooch. When your hounds match, we'll suggest a local dog park to go meet up, and give you contact information for the other dog owner.
 
-## Quote from You ##
-  > A quote from a spokesperson in your company.
+<!-- ## Customer Quote ##
+  > Provide a quote from a hypothetical customer that describes how they experienced the benefit. -->
+"This app helped me meet other dog owners. It's fun watching our dogs play." -- A user, probably
 
-## How to Get Started ##
-  > Describe how easy it is to get started.
-
-## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
-
-## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+<!-- ## Closing and Call to Action ##
+  > Wrap it up and give pointers where the reader should go next. -->
+Who's a good dog? Is it your dog? Then they deserve to frolick with other good dogs. Head over to barkr.com to get started!
