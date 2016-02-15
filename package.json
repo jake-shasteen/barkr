@@ -1,0 +1,28 @@
+{
+  "name": "barkr",
+  "version": "0.0.1",
+  "description": "The social dog app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jake-shasteen/2016-01-mvp.git"
+  },
+  "keywords": [
+    "dogs",
+    "barkr"
+  ],
+  "author": "Jake Shasteen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jake-shasteen/2016-01-mvp/issues"
+  },
+  "homepage": "https://github.com/jake-shasteen/2016-01-mvp#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "sequelize": "^3.19.2",
+    "sqlite3": "^3.1.1"
+  }
+}
