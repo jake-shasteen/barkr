@@ -1,4 +1,4 @@
-var Image = require( './imageModel' );
+var Image = require( './image' );
 
 module.exports = {
   showAll: function( req, res, next ) {

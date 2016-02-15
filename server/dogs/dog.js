@@ -1,5 +1,6 @@
 var Sequelize = require( 'sequelize' );
 var db = require( '../config/db' );
+var Image = require( '../images/image' );
 
 var Dog = db.define( 'dog', {
   name: {
@@ -23,5 +24,7 @@ var Dog = db.define( 'dog', {
 });
 
 Dog.sync();
+
+Image.belongsTo( Dog );
 
 module.exports = Dog;
