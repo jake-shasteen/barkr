@@ -1,5 +1,5 @@
 var Sequelize = require( 'sequelize' );
-var db = new Sequelize( 'barkr', 'root', '', {
+var db = new Sequelize( 'barkr', 'barkr', null, {
   host: 'localhost',
   dialect: 'mysql',
 
