@@ -5,6 +5,8 @@ var app = express();
 
 const PORT = 8000;
 
+require( './config/middleware' )( app, express );
+
 app.listen( PORT );
 console.log( 'Listening on port ' + PORT );
 
