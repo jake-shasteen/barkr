@@ -1,19 +1,5 @@
 angular.module( 'barkr.matches', [] )
 
-.controller( 'MatchesController', function( $scope, Find ) {
-  $scope.dog = {};
-  $scope.dog.images = [];
-  $scope.dog.primaryImage = '';
-
-  Find.randomDog( function( dog ) {
-    $scope.dog = dog;
-
-    Find.fillImages( dog.id, function( images ) {
-      images = _.pluck( images, 'path' );
-      $scope.dog.images = images;
-      $scope.dog.primaryImage = images[0];
-    });
-
-  });
+.controller( 'MatchesController', function( $scope, Matches ) {
 
 } );
