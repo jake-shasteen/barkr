@@ -92,8 +92,20 @@ angular.module( 'barkr.services', [] )
     });
   };
 
+  var showAll = function( userId, callback ) {
+    return $http({
+      method: 'GET',
+      url: '/api/matches/' + userId
+    }).then( function( resp ) {
+      callback( resp.data );
+    }, function( err ) {
+      console.error( err );
+    });
+  }
+
   return {
     upVote: upVote,
-    downVote: downVote
+    downVote: downVote,
+    showAll: showAll
   };
 });

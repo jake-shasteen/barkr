@@ -5,10 +5,12 @@ var User = require( '../users/user' );
 
 var Match = db.define( 'match', {
   u_id: {
-    type: Sequelize.INTEGER
+    type: Sequelize.INTEGER,
+    unique: 'user_dog_idx'
   },
   d_id: {
-    type: Sequelize.INTEGER
+    type: Sequelize.INTEGER,
+    unique: 'user_dog_idx'
   },
   vote: {
     type: Sequelize.BOOLEAN
