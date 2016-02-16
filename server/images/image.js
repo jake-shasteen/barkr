@@ -12,6 +12,10 @@ var Image = db.define( 'image', {
   }
 });
 
-Image.sync();
+Image.sync().then( function() {
+  console.log( "Table created:", Image );
+}).catch( function( err ) {
+  console.error( err );
+});
 
 module.exports = Image;

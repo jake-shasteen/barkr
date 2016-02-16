@@ -23,7 +23,12 @@ var Dog = db.define( 'dog', {
   }
 });
 
-Dog.sync();
+Dog.sync().then( function() {
+  console.log( "Table created:", Dog );
+} )
+.catch( function( err ) {
+  console.error( err );
+});
 
 Image.belongsTo( Dog );
 

@@ -17,7 +17,12 @@ var Match = db.define( 'match', {
 Match.belongsTo( Dog, {as: 'voter', foreignKey: 'v_id'} );
 Match.belongsTo( Dog, {as: 'target', foreignKey: 't_id'} );
 
-Match.sync();
+Match.sync().then( function() {
+  console.log( "Table created:", Match );
+})
+.catch( function( err ) {
+  console.error( err );
+});
 
 
 module.exports = Match;
