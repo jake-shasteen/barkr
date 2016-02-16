@@ -32,6 +32,7 @@ module.exports = function ( app, express ) {
 
   /* MATCHES */
   app.get( '/api/matches/:userid', matchController.showMatches );
+  app.get( '/api/matches/unmatched/:userid', matchController.showUnmatchedDogIds );
   app.post( '/api/matches/upvote/:userid/:dogid', matchController.upvote );
   app.post( '/api/matches/downvote/:userid/:dogid', matchController.downvote );
 };

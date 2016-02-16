@@ -84,6 +84,19 @@ angular.module( 'barkr.services', [] )
 
 .factory( 'Match', function( $http ) {
 
+  // returns an array of dog ids for dogs the user
+  // has not previously matched with
+  var unMatchedDogIds = function( userid, callback ) {
+    $http({
+      method: 'GET',
+      url: '/api/matches/unmatched/' + userid
+    }).then( function( resp ) {
+      callback( resp.data );
+    }, function( err ) {
+      console.error( err );
+    });
+  }
+
   var upVote = function( user, dog, callback ) {
     $http({
       method: 'POST',
