@@ -1,4 +1,4 @@
-angular.module('barkr.services', [])
+angular.module( 'barkr.services', [] )
 
 .factory( 'Find', function( $http ) {
 
@@ -53,5 +53,10 @@ angular.module('barkr.services', [])
     countDogs: countDogs,
     randomDog: randomDog,
     fillImages: fillImages
-  }
-} );
+  };
+} )
+
+.factory( 'Matches', function( $http ) {
+
+  return {};
+});
