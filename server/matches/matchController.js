@@ -18,6 +18,9 @@ module.exports = {
     var userid = parseInt( req.params.userid );
     db.query("SELECT dogs.id FROM dogs WHERE dogs.id NOT IN ( SELECT d_id FROM matches WHERE u_id = " + userid + ")", { type: db.QueryTypes.SELECT })
     .then( function( dog_ids ) {
+      dog_ids.forEach( function( dog, idx ) {
+        dog_ids[idx] = dog.id;
+      });
       res.json( dog_ids );
     },
     function( err ) {
