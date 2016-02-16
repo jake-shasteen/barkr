@@ -16,11 +16,11 @@ angular.module( 'barkr.find', [] )
 
   });
 
-  $scope.upvote = function() {
+  $scope.like = function() {
     Match.upVote( {id: 1}, $scope.dog );
   };
 
-  $scope.downvote = function() {
+  $scope.skip = function() {
     Match.downVote( {id: 1}, $scope.dog );
   };
 

@@ -4,8 +4,8 @@
   </div>
   <h2 class="dogname white_blk_bor">{{ dog.name }}</h2>
   <h3 class="distance white_blk_bor">{{ dog.distance }}</h3>
-  <div class="downvote" ng-click="downvote()"></div>
-  <div class="upvote" ng-click="upvote()"></div>
+  <div class="match_btn skip" ng-click="skip()"></div>
+  <div class="match_btn like" ng-click="like()"></div>
   <p class="profile white_blk_bor">{{ dog.description }}</p>
   <div class="gallery">
     <img class="gallery_image" ng-repeat="image in dog.images" src="{{ image }}"><img>
