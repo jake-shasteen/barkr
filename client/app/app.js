@@ -1,4 +1,5 @@
 angular.module( 'barkr', [
+  'barkr.congrats',
   'barkr.find',
   'barkr.matches',
   'barkr.services',
