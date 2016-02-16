@@ -4,10 +4,12 @@ var Dog = require( '../dogs/dog' );
 
 var Image = db.define( 'image', {
   dog_id: {
-    type: Sequelize.INTEGER
+    type: Sequelize.INTEGER,
+    allowNull: false
   },
   path: {
     type: Sequelize.STRING,
+    allowNull: false,
     unique: true
   }
 });
