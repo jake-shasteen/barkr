@@ -7,16 +7,12 @@ angular.module( 'barkr.services', [] )
       method: 'GET',
       url: '/api/dogs/' + id
     }).then( function( dog ) {
-      $http({
-        method: 'GET',
-        url: '/api/dogs/' + id + '/host'
-      }).then( function( host ) {
-        // dog.data is the dog
-        // host.data is the host
-        dog.data.host = host.data;
-        callback( dog.data );
-      }, function ( err ) {
-        console.error( err );
+      fillHost( id, function( host ) {
+        dog.data.host = host;
+        fillImages( id, function( images ) {
+          dog.data.images = _.pluck( images, 'path' );
+          callback( dog.data );
+        });
       });
     }, function( err ) {
       console.error( err );

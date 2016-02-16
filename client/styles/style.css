@@ -1,7 +1,6 @@
 body {
   font-size: 3em;
   background: black;
-  overflow: hidden;
 }
 
 .white_blk_bor {
@@ -31,6 +30,10 @@ body {
     2px -1px 0 #000,
     -2px -1px 0 #000;
   color: white;
+}
+
+#find {
+  overflow: hidden;
 }
 
 #matches {
