@@ -1,5 +1,5 @@
 angular.module( 'barkr.matches', [] )
 
-.controller( 'MatchesController', function( $scope, Matches ) {
+.controller( 'MatchesController', function( $scope, Match ) {
 
 } );

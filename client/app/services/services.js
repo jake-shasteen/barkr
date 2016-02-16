@@ -56,7 +56,28 @@ angular.module( 'barkr.services', [] )
   };
 } )
 
-.factory( 'Matches', function( $http ) {
+.factory( 'Match', function( $http ) {
 
-  return {};
+  var upVote = function( user, dog ) {
+    return $http({
+      method: 'POST',
+      url: '/api/matches/upvote/'+user.id+'/'+dog.id
+    }).then( function( resp ) {
+      callback( resp.data );
+    });
+  };
+
+  var downVote = function( user, dog ) {
+    return $http({
+      method: 'POST',
+      url: '/api/matches/downvote/'+user.id+'/'+dog.id
+    }).then( function( resp ) {
+      callback( resp.data );
+    });
+  };
+
+  return {
+    upVote: upVote,
+    downVote: downVote
+  };
 });

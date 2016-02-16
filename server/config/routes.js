@@ -30,5 +30,7 @@ module.exports = function ( app, express ) {
   app.post( '/api/hosts', hostController.addOne );
 
   /* MATCHES */
-  // app.get( '/api/dogs/matches', matchController.showMatches );
+  app.get( '/api/matches/:userid', matchController.showMatches );
+  app.post( '/api/matches/upvote/:userid/:dogid', matchController.upvote );
+  app.post( '/api/matches/downvote/:userid/:dogid', matchController.downvote );
 };
