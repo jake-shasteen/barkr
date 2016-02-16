@@ -1,5 +1,6 @@
 var dogController = require( '../dogs/dogController' );
 var imageController = require( '../images/imageController' );
+var matchController = require( '../matches/matchController' );
 
 module.exports = function ( app, express ) {
   app.get( '/api/dogs', dogController.showAll );
