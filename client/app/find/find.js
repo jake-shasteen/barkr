@@ -30,8 +30,12 @@ angular.module( 'barkr.find', [] )
 
   $scope.skip = function() {
     Match.downVote( {id: 1}, $scope.dog, function() {
-      $route.reload();
+      $scope.next();
     } );
+  };
+
+  $scope.next = function() {
+    $route.reload();
   };
 
 } );
