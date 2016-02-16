@@ -19,10 +19,10 @@ module.exports = function ( app, express ) {
   app.post( '/api/images', imageController.addOne );
 
   /* USERS */
-  api.get( '/api/users', userController.showAll );
-  api.get( '/api/users/:id', userController.showOne );
-  api.put( 'api/users/:id', userController.editOne );
-  api.post( '/api/users', userController.addOne );
+  app.get( '/api/users', userController.showAll );
+  app.get( '/api/users/:id', userController.showOne );
+  app.put( 'api/users/:id', userController.editOne );
+  app.post( '/api/users', userController.addOne );
 
 
   /* HOSTS */
