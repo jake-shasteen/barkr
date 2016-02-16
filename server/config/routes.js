@@ -11,6 +11,7 @@ module.exports = function ( app, express ) {
   app.get( '/api/images', imageController.showAll );
   app.get( '/api/images/count', imageController.count );
   app.get( '/api/images/dog/:dogId', imageController.byDogId );
+  app.get( '/api/images/:id', imageController.showOne );
   app.post( '/api/images', imageController.addOne );
 
   /* MATCHES */

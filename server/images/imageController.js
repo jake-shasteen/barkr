@@ -33,12 +33,21 @@ module.exports = {
 
   byDogId: function( req, res, next ) {
     var id = req.params.dogId;
-    console.log( id );
     Image.findAll( {attributes: ['id', 'path'], include: { model: Dog, attributes: [], where: { 'id': id } } } )
     .then( function( images ) {
       res.json( images );
     }, function( err ) {
       helpers.reportError( res, err );
-    } );
+    });
+  },
+
+  showOne: function( req, res, next ) {
+    var id = req.params.id;
+    Image.findOne( {attributes: ['path'], where: {'id': id} } )
+    .then( function( image ) {
+      res.json( image.path );
+    }, function( err ) {
+      helpers.reportError( res, err );
+    });
   }
 };
