@@ -1,12 +1,13 @@
 var db = require( '../config/db' );
 var Sequelize = require( 'sequelize' );
 var Dog = require( '../dogs/dog' );
+var User = require( '../users/user' );
 
 var Match = db.define( 'match', {
-  v_id: {
+  u_id: {
     type: Sequelize.INTEGER
   },
-  t_id: {
+  d_id: {
     type: Sequelize.INTEGER
   },
   vote: {
@@ -21,7 +22,7 @@ Match.sync().then( function() {
   console.error( err );
 });
 
-Match.belongsTo( Dog, {as: 'voter', foreignKey: 'v_id'} );
-Match.belongsTo( Dog, {as: 'target', foreignKey: 't_id'} );
+Match.belongsTo( User, {as: 'voter', foreignKey: 'u_id'} );
+Match.belongsTo( Dog, {as: 'target', foreignKey: 'd_id'} );
 
 module.exports = Match;

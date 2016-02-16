@@ -18,6 +18,17 @@ module.exports = function ( app, express ) {
   app.get( '/api/images/:id', imageController.showOne );
   app.post( '/api/images', imageController.addOne );
 
+  /* USERS */
+  api.get( '/api/users', userController.showAll );
+  api.get( '/api/users/:id', userController.showOne );
+  api.put( 'api/users/:id', userController.editOne );
+  api.post( '/api/users', userController.addOne );
+
+
+  /* HOSTS */
+  app.get( '/api/hosts', hostController.showAll );
+  app.post( '/api/hosts', hostController.addOne );
+
   /* MATCHES */
   // app.get( '/api/dogs/matches', matchController.showMatches );
 };
