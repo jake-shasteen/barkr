@@ -4,10 +4,12 @@ var Image = require( '../images/image' );
 
 var Dog = db.define( 'dog', {
   name: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false
   },
   description: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false
   },
   address: {
     type: Sequelize.STRING
@@ -16,7 +18,8 @@ var Dog = db.define( 'dog', {
     type: Sequelize.INTEGER
   },
   email: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false
   },
   phone: {
     type: Sequelize.STRING
