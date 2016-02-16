@@ -1,6 +1,8 @@
 var dogController = require( '../dogs/dogController' );
 var imageController = require( '../images/imageController' );
 var matchController = require( '../matches/matchController' );
+var hostController = require( '../hosts/hostController' );
+var userController = require( '../users/userController' );
 
 module.exports = function ( app, express ) {
   /* DOGS */

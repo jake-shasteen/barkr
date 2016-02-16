@@ -11,18 +11,9 @@ var Dog = db.define( 'dog', {
     type: Sequelize.STRING,
     allowNull: false
   },
-  address: {
-    type: Sequelize.STRING
-  },
-  zip: {
-    type: Sequelize.INTEGER
-  },
-  email: {
-    type: Sequelize.STRING,
+  host_id: {
+    type: Sequelize.INTEGER,
     allowNull: false
-  },
-  phone: {
-    type: Sequelize.STRING
   }
 });
 
