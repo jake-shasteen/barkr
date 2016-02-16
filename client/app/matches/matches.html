@@ -1,7 +1,7 @@
 <div id='matches'>
   <p ng-show="!matches" class="dogname white_blk_bor"> This page will show your previous matches. Right now you don't have any! </p>
   <div class="match white_blk_bor" ng-repeat="match in matches track by $index">
-    <h3>{{ match.name }}</h3>
-    <h4>{{ match.host.name }}</h4>
+    <h3>{{ match.name }} - {{ match.description }}</h3>
+    <h4>{{ match.host.name }} - <a ng-show="match.host.website" href="{{ match.host.website ]}">{{ match.host.website }}</a></h4>
   </div>
 </div>
