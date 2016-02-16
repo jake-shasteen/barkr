@@ -3,7 +3,7 @@
   <h2 class="dogname white_blk_bor">{{ dog.name }}</h2>
   <h3 class="distance white_blk_bor">{{ dog.distance }}</h3>
   <div class="match_btn skip" ng-click="skip()"></div>
-  <div class="match_btn like" ng-click="like()"></div>
+  <div class="match_btn like" ng-click="like()" uib-popover-template="popover" popover-placement="left" ></div>
   <p class="profile white_blk_bor">{{ dog.description }}</p>
   <div class="gallery">
     <img class="gallery_image" ng-repeat="image in dog.images" src="{{ image }}"><img>

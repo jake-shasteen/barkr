@@ -3,6 +3,7 @@ angular.module( 'barkr', [
   'barkr.find',
   'barkr.matches',
   'barkr.services',
+  'ui.bootstrap',
   'ngRoute'
   ])
 

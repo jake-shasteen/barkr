@@ -5,6 +5,8 @@ angular.module( 'barkr.find', [] )
   $scope.dog.images = [];
   $scope.dog.primaryImage = '';
 
+  $scope.popover = '../app/congrats/congrats.html';
+
   Find.randomDog( function( dog ) {
     $scope.dog = dog;
 
@@ -18,7 +20,7 @@ angular.module( 'barkr.find', [] )
 
   $scope.like = function() {
     Match.upVote( {id: 1}, $scope.dog, function() {
-      $location.path( '/congrats' );
+      setTimeout( $route.reload, 3000 );
     });
   };
 
