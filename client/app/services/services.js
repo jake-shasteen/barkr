@@ -3,7 +3,7 @@ angular.module( 'barkr.services', [] )
 .factory( 'Find', function( $http ) {
 
   var oneDog = function( id, callback ) {
-    return $http({
+    $http({
       method: 'GET',
       url: '/api/dogs/' + id
     }).then( function( dog ) {
@@ -20,7 +20,7 @@ angular.module( 'barkr.services', [] )
   };
 
   var allDogs = function( callback ) {
-    return $http({
+    $http({
         method: 'GET',
         url: '/api/dogs'
       })
@@ -30,7 +30,7 @@ angular.module( 'barkr.services', [] )
   };
 
   var countDogs = function( callback ) {
-    return $http({
+    $http({
       method: 'GET',
       url: '/api/dogs/count'
     })
@@ -40,24 +40,20 @@ angular.module( 'barkr.services', [] )
   }
 
   var randomDog = function( callback ) {
-    return $http({
+    $http({
       method: 'GET',
       url: '/api/dogs/count'
     })
     .then( function( resp ) {
       var pickDog = Math.floor( Math.random() * resp.data )+1;
-      return $http({
-        method: 'GET',
-        url: 'api/dogs/' + pickDog
-      })
-      .then( function( resp ) {
-        callback( resp.data );
-      })
+      oneDog( pickDog, function( dog ) {
+        callback( dog );
+      });
     });
   }
 
   var fillHost = function( id, callback ) {
-    return $http({
+    $http({
       method: 'GET',
       url: '/api/dogs/' + id + '/host'
     }).then( function( resp ) {
@@ -68,7 +64,7 @@ angular.module( 'barkr.services', [] )
   }
 
   var fillImages = function( id, callback ) {
-    return $http({
+    $http({
       method: 'GET',
       url: '/api/images/dog/' + id
     }).then( function( resp ) {
@@ -89,7 +85,7 @@ angular.module( 'barkr.services', [] )
 .factory( 'Match', function( $http ) {
 
   var upVote = function( user, dog, callback ) {
-    return $http({
+    $http({
       method: 'POST',
       url: '/api/matches/upvote/'+user.id+'/'+dog.id
     }).then( function( resp ) {
@@ -100,7 +96,7 @@ angular.module( 'barkr.services', [] )
   };
 
   var downVote = function( user, dog, callback ) {
-    return $http({
+    $http({
       method: 'POST',
       url: '/api/matches/downvote/'+user.id+'/'+dog.id
     }).then( function( resp ) {
@@ -111,7 +107,7 @@ angular.module( 'barkr.services', [] )
   };
 
   var showAll = function( userId, callback ) {
-    return $http({
+    $http({
       method: 'GET',
       url: '/api/matches/' + userId
     }).then( function( resp ) {

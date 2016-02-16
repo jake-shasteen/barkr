@@ -34,6 +34,7 @@ body {
 
 #find {
   overflow: hidden;
+  height: 800px;
 }
 
 #matches {

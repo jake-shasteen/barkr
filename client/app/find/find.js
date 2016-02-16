@@ -9,16 +9,7 @@ angular.module( 'barkr.find', [] )
 
   Find.randomDog( function( dog ) {
     $scope.dog = dog;
-
-    Find.fillHost( dog.id, function( host ) {
-      $scope.dog.host = host;
-    });
-
-    Find.fillImages( dog.id, function( images ) {
-      images = _.pluck( images, 'path' );
-      $scope.dog.images = images;
-      $scope.dog.primaryImage = images[0];
-    });
+    $scope.dog.primaryImage = dog.images[0];
 
   });
 
