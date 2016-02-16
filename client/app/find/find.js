@@ -1,6 +1,6 @@
 angular.module( 'barkr.find', [] )
 
-.controller( 'FindController', function( $scope, Find ) {
+.controller( 'FindController', function( $scope, Find, Match ) {
   $scope.dog = {};
   $scope.dog.images = [];
   $scope.dog.primaryImage = '';
@@ -15,5 +15,10 @@ angular.module( 'barkr.find', [] )
     });
 
   });
+
+  $scope.upvote = function() {
+  };
+
+  $scope.downvote = function() {};
 
 } );
