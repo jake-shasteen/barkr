@@ -2,6 +2,27 @@ angular.module( 'barkr.services', [] )
 
 .factory( 'Find', function( $http ) {
 
+  var oneDog = function( id, callback ) {
+    return $http({
+      method: 'GET',
+      url: '/api/dogs/' + id
+    }).then( function( dog ) {
+      $http({
+        method: 'GET',
+        url: '/api/dogs/' + id + '/host'
+      }).then( function( host ) {
+        // dog.data is the dog
+        // host.data is the host
+        dog.data.host = host.data;
+        callback( dog.data );
+      }, function ( err ) {
+        console.error( err );
+      });
+    }, function( err ) {
+      console.error( err );
+    })
+  };
+
   var allDogs = function( callback ) {
     return $http({
         method: 'GET',
@@ -60,6 +81,7 @@ angular.module( 'barkr.services', [] )
   }
 
   return {
+    oneDog: oneDog,
     allDogs: allDogs,
     countDogs: countDogs,
     randomDog: randomDog,
