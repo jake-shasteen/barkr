@@ -17,6 +17,7 @@
     "angular-mocks": "~1.3.16",
     "angular-ui-router": "^0.2.18",
     "underscore": "^1.8.3",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "angular-bootstrap": "angular-ui-bootstrap-bower#^1.1.2"
   }
 }
