@@ -18,22 +18,22 @@ Once the project moves into development, the press release can be used as a touc
  
 <!-- ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand. -->
-# New App Encourages Dog Owners To Be Social
+# New App Encourages Pet Adoption
 <!-- ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title. -->
-## Barkr connects your friendly dog with other friendly dogs
+## Barkr connects adoptable pets with homes
 
 <!-- ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good. -->
 ### What's It About?
-Barkr encourages responsible dog ownership through socialization. Barkr matches you with other dog owners, and suggests playdates at local dog parks.
+Barkr encourages pet adoption by presenting information about rescue animals in need of homes in a digestible format.
 <!-- ## Problem ##
   > Describe the problem your product solves. -->
-Dogs, like humans, are social creatures, and typically enjoy the companionship of others. Sometimes it is hard to get motivated to go to the dog park so that your dog can interact with other dogs. Also, there are not enough pictures of fluffy dogs in the world.
+Pet adoption centers typically have more animals to care for than people willing to adopt. Also, there are not enough pictures of fluffy dogs in the world.
 
 <!-- ## Solution ##
   > Describe how your product elegantly solves the problem. -->
-Primarily, our app allows you to look at pictures of cute doggies. Our app also solves the motivation problem by adding an element of social accountability. When you match your dog with another dog, you are given suggestions for a local dog park and asked to contact the other dog owner to set up a playdate.
+Primarily, our app allows you to look at pictures of cute doggies. It connects people who are looking to adopt a dog with those dogs and the adoption centers hosting them.
 
 <!-- ## Quote from You ##
   > A quote from a spokesperson in your company. -->
@@ -41,12 +41,12 @@ Primarily, our app allows you to look at pictures of cute doggies. Our app also 
 
 <!-- ## How to Get Started ##
   > Describe how easy it is to get started. -->
-Simply sign up online, and upload a picture of your dog. Tell us what your pet's favorite toys and activities are, and give us your zipcode. We'll show you pictures and profiles of nearby dogs and let you decide which ones you think will be a good fit for your pooch. When your hounds match, we'll suggest a local dog park to go meet up, and give you contact information for the other dog owner.
+Simply sign up online, and create a profile to determine what personality of dog might fit your household best. We'll show you pictures and profiles of nearby dogs and let you decide which ones you think will be a good fit. When you match with a dog, we'll give you contact information for the local adoption center hosting that dog.
 
 <!-- ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit. -->
-"This app helped me meet other dog owners. It's fun watching our dogs play." -- A user, probably
+"This app helped me find my best friend." -- A user, probably
 
 <!-- ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next. -->
-Who's a good dog? Is it your dog? Then they deserve to frolick with other good dogs. Head over to barkr.com to get started!
+Looking to adopt a dog? Head over to barkr.com to get started!
