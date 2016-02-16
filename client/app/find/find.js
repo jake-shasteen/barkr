@@ -18,7 +18,7 @@ angular.module( 'barkr.find', [] )
 
   $scope.like = function() {
     Match.upVote( {id: 1}, $scope.dog, function() {
-      $location.path( '/find' );
+      $location.path( '/congrats' );
     });
   };
 

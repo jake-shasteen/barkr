@@ -16,9 +16,9 @@ angular.module( 'barkr', [
       templateUrl: 'app/matches/matches.html',
       controller: 'MatchesController'
     })
-    .when( '/parks', {
-      templateUrl: 'app/parks/parks.html',
-      controller: 'ParksController'
+    .when( '/congrats', {
+      templateUrl: 'app/congrats/congrats.html',
+      controller: 'CongratsController'
     })
     .otherwise({
       redirectTo: '/find'
