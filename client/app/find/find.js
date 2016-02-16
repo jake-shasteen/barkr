@@ -7,7 +7,7 @@ angular.module( 'barkr.find', [] )
 
   $scope.popover = '../app/congrats/congrats.html';
 
-  Find.randomDog( function( dog ) {
+  Find.unMatchedDog( 1, function( dog ) {
     $scope.dog = dog;
     $scope.dog.primaryImage = dog.images[0];
 

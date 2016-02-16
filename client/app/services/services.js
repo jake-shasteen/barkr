@@ -54,7 +54,7 @@ angular.module( 'barkr.services', [] )
 
   var unMatchedDog = function( userid, callback ) {
     Match.unMatchedDogIds( userid, function( dogIds ) {
-      var pickDog = Math.floor( Math.random() * dogIds.length )+1;
+      var pickDog = Math.floor( Math.random() * dogIds.length );
       oneDog( dogIds[pickDog], function( dog ) {
         callback( dog );
       });
@@ -141,7 +141,7 @@ angular.module( 'barkr.services', [] )
   }
 
   return {
-    unMachedDogIds: unMatchedDogIds,
+    unMatchedDogIds: unMatchedDogIds,
     upVote: upVote,
     downVote: downVote,
     showAll: showAll
