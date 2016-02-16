@@ -7,7 +7,7 @@ var User = db.define( 'user', {
     allowNull: false
   },
   description: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
     allowNull: false
   },
   address: {

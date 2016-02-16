@@ -8,7 +8,7 @@ var Dog = db.define( 'dog', {
     allowNull: false
   },
   description: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
     allowNull: false
   },
   host_id: {

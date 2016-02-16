@@ -7,9 +7,11 @@ var Host = db.define( 'host', {
     type: Sequelize.STRING,
     allowNull: false
   },
-  description: {
+  website: {
     type: Sequelize.STRING,
-    allowNull: false
+  },
+  description: {
+    type: Sequelize.TEXT,
   },
   address: {
     type: Sequelize.STRING

@@ -32,8 +32,8 @@ module.exports = {
   },
 
   addOne: function( req, res, next ) {
-    Dog.create( req.body ).then( function() {
-      res.send( "New dog profile added!" );
+    Dog.create( req.body ).then( function( dog ) {
+      res.send( "New dog profile added! ID: " + dog.id );
     }, function( err ) {
       helpers.reportError( res, err );
     });
