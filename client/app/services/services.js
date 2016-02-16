@@ -1,3 +1,11 @@
 angular.module('barkr.services', [])
 
-.factory( function() {} );
+.factory( 'Find', function( $http ) {
+  return $http({
+      method: 'GET',
+      url: '/api/dogs'
+    })
+    .then( function ( resp ) {
+      return resp.data;
+    });
+} );

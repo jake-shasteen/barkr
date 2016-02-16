@@ -1,5 +1,6 @@
 angular.module( 'barkr', [
   'barkr.find',
+  'barkr.services',
   'ngRoute'
   ])
 

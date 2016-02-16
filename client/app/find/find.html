@@ -1,6 +1,9 @@
 <div id='find'>
-  <img class="full_splash" src="{{ primaryImage }}"></img>
-  <h2 class="dogname white_blk_bor">{{ name }}</h2>
-  <h3 class="distance white_blk_bor">{{ distance }}</h3>
-  <p class="profile white_blk_bor">{{ profile }}</p>
+  <div class="container">
+    <img class="full_splash" src="{{ dog.primaryImage }}"></img>
+  </div>
+  <h2 class="dogname white_blk_bor">{{ dog.name }}</h2>
+  <h3 class="distance white_blk_bor">{{ dog.distance }}</h3>
+  <p class="profile white_blk_bor">{{ dog.profile }}</p>
+  <img class="gallery" ng-repeat="image in dog.images" src="{{ image }}"><img>
 </div>
