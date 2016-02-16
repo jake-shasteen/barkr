@@ -1,6 +1,6 @@
 angular.module( 'barkr.services', [] )
 
-.factory( 'Find', function( $http ) {
+.factory( 'Find', function( $http, Match ) {
 
   var oneDog = function( id, callback ) {
     $http({
@@ -52,6 +52,15 @@ angular.module( 'barkr.services', [] )
     });
   }
 
+  var unMatchedDog = function( userid, callback ) {
+    Match.unMatchedDogIds( userid, function( dogIds ) {
+      var pickDog = Math.floor( Math.random() * dogIds.length )+1;
+      oneDog( dogIds[pickDog], function( dog ) {
+        callback( dog );
+      });
+    });
+  }
+
   var fillHost = function( id, callback ) {
     $http({
       method: 'GET',
@@ -77,6 +86,7 @@ angular.module( 'barkr.services', [] )
     allDogs: allDogs,
     countDogs: countDogs,
     randomDog: randomDog,
+    unMatchedDog: unMatchedDog,
     fillImages: fillImages,
     fillHost: fillHost
   };
@@ -131,6 +141,7 @@ angular.module( 'barkr.services', [] )
   }
 
   return {
+    unMachedDogIds: unMatchedDogIds,
     upVote: upVote,
     downVote: downVote,
     showAll: showAll
