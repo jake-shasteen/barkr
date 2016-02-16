@@ -5,6 +5,7 @@ var matchController = require( '../matches/matchController' );
 module.exports = function ( app, express ) {
   /* DOGS */
   app.get( '/api/dogs', dogController.showAll );
+  app.get( '/api/dogs/count', dogController.count );
   app.get( '/api/dogs/:id', dogController.showOne );
   app.post( '/api/dogs/', dogController.addOne );
 

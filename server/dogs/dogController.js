@@ -14,12 +14,21 @@ module.exports = {
 
   showOne: function( req, res, next ) {
     var id = req.params.id;
-    Dog.find({ 'id': id })
+    Dog.findOne({ where: {'id': id } })
     .then( function( dog ) {
       res.json( dog );
     }, function( err ) {
       helpers.reportError( res, err );
     })
+  },
+
+  count: function( req, res, next ) {
+    Dog.count()
+    .then( function( count ) {
+      res.json( count );
+    }, function( err ) {
+      helpers.reportError( res, err );
+    });
   },
 
   addOne: function( req, res, next ) {
