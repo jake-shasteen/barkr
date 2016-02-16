@@ -40,11 +40,19 @@ body {
 }
 
 .gallery {
+  position: absolute;
   margin-left: 10px;
   height: 20%;
-  position: absolute;
   top: 75%;
 
+}
+
+.gallery_image {
+  margin-right: 5px;
+  margin-left: 5px;
+  height: 100%;
+  width: auto;
+  float: left;
 }
 
 .dogname {

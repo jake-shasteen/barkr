@@ -5,5 +5,7 @@
   <h2 class="dogname white_blk_bor">{{ dog.name }}</h2>
   <h3 class="distance white_blk_bor">{{ dog.distance }}</h3>
   <p class="profile white_blk_bor">{{ dog.description }}</p>
-  <img class="gallery" ng-repeat="image in dog.images" src="{{ image }}"><img>
+  <div class="gallery">
+    <img class="gallery_image" ng-repeat="image in dog.images" src="{{ image }}"><img>
+  </div>
 </div>
