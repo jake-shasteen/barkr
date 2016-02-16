@@ -1,6 +1,7 @@
 var helpers = require( '../config/helpers' );
 var db = require( '../config/db' );
 var Image = require( './image' );
+var Dog = require( '../dogs/dog' );
 
 module.exports = {
   showAll: function( req, res, next ) {
@@ -28,5 +29,16 @@ module.exports = {
     }, function( err ) {
       helpers.reportError( res, err );
     });
+  },
+
+  byDogId: function( req, res, next ) {
+    var id = req.params.dogId;
+    console.log( id );
+    Image.findAll( {attributes: ['id', 'path'], include: { model: Dog, attributes: [], where: { 'id': id } } } )
+    .then( function( images ) {
+      res.json( images );
+    }, function( err ) {
+      helpers.reportError( res, err );
+    } );
   }
 };
