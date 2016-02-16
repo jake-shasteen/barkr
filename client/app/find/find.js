@@ -10,6 +10,10 @@ angular.module( 'barkr.find', [] )
   Find.randomDog( function( dog ) {
     $scope.dog = dog;
 
+    Find.fillHost( dog.id, function( host ) {
+      $scope.dog.host = host;
+    });
+
     Find.fillImages( dog.id, function( images ) {
       images = _.pluck( images, 'path' );
       $scope.dog.images = images;
@@ -20,7 +24,7 @@ angular.module( 'barkr.find', [] )
 
   $scope.like = function() {
     Match.upVote( {id: 1}, $scope.dog, function() {
-      setTimeout( $route.reload, 3000 );
+      // setTimeout( $route.reload, 3000 );
     });
   };
 

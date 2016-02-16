@@ -27,6 +27,7 @@ module.exports = function ( app, express ) {
 
   /* HOSTS */
   app.get( '/api/hosts', hostController.showAll );
+  app.get( '/api/dogs/:id/host', hostController.byDogId );
   app.post( '/api/hosts', hostController.addOne );
 
   /* MATCHES */

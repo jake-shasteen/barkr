@@ -39,6 +39,17 @@ angular.module( 'barkr.services', [] )
     });
   }
 
+  var fillHost = function( id, callback ) {
+    return $http({
+      method: 'GET',
+      url: '/api/dogs/' + id + '/host'
+    }).then( function( resp ) {
+      callback( resp.data );
+    }, function( err ) {
+      console.error( err );
+    });
+  }
+
   var fillImages = function( id, callback ) {
     return $http({
       method: 'GET',
@@ -52,7 +63,8 @@ angular.module( 'barkr.services', [] )
     allDogs: allDogs,
     countDogs: countDogs,
     randomDog: randomDog,
-    fillImages: fillImages
+    fillImages: fillImages,
+    fillHost: fillHost
   };
 } )
 
