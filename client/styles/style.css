@@ -118,6 +118,15 @@ body {
   font-size: 1ch;
 }
 
+#host input, #host textarea, #host button {
+  border-radius: 5px;
+  margin: 1px;
+}
+
+#host textarea {
+  height: 100px;;
+}
+
 html.ng-scope {
   padding: 0;
   margin: 0;

@@ -1,7 +1,7 @@
 <div id='host'>
   <h2>Welcome to the host portal. Here you can add dogs for adoption to our database or edit an existing dog's information.</h2>
       <p> For this demo we assume we are logged in as SF SPCA </p>
-  <br>Add a Dog:<br>
+  <h3>Add a Dog:</h3>
   <div class="row add_dog">
     <form name="add" ng-submit="submitAddDog()">
     <div class="col-md-1"></div>
@@ -11,7 +11,7 @@
     <div class="col-sm-1"></div>
     </form>
   </div>
-  <br>Edit a Dog:<br>
+  <h3>Edit a Dog:</h3>
   <div class="edit_dog" ng-repeat="dog in dogs">
     <form class="row" name="dog.{{ dog.id }}" ng-submit="submitForm()">
       <div class="col-md-1"></div>
@@ -24,7 +24,7 @@
     <form class="row" name="add_img.{{ dog.id }}" ng-submit="submitImage( add_img.$valid, dog.id )" novalidate>
       <div class="col-md-2"></div>
       <input class="col-md-7" type="url" placeholder="http://www.path.com/to/file.jpg" value="{{ dog.path }}" required></input>
-      <button class="col-md-2" type="submit" ng-disabled="add_img.$invalid">Submit Image</button>
+      <button class="col-md-2" type="submit" ng-disabled="add_img.$invalid">Add New Image</button>
       <div class="col-md-1"></div>
     </form>
     <br>
