@@ -9,6 +9,8 @@
     <img class="gallery_image" ng-repeat="image in dog.images" src="{{ image }}"><img>
   </div>
 </div>
-<div class="dogname white_blk_bor" ng-show="!dog.id">
-  <p>No more dogs :(</p>
+<div ng-show="!loading">
+  <div class="dogname white_blk_bor" ng-show="!dog.id">
+    <p>No more dogs :(</p>
+  </div>
 </div>

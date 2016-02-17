@@ -5,9 +5,12 @@ angular.module( 'barkr.find', [] )
   $scope.dog.images = [];
   $scope.dog.primaryImage = '';
 
+  $scope.loading = true;
+
   $scope.popover = '../app/congrats/congrats.html';
 
   Find.unMatchedDog( 1, function( dog ) {
+    $scope.loading = false;
     $scope.dog = dog;
     $scope.dog.primaryImage = dog.images[0];
 
