@@ -14,4 +14,10 @@ angular.module( 'barkr.host', [] )
   $scope.submitAddDog = function() {
 
   };
+
+  $scope.submitImage = function( isvalid, id ) {
+    if( isvalid ) {
+
+    }
+  }
 });

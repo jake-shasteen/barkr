@@ -113,7 +113,8 @@ body {
   font-style: italic;
 }
 
-.edit_dog {
+#host {
+  background-color: lightgrey;
   font-size: 1ch;
 }
 
