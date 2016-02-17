@@ -1,10 +1,12 @@
 <div id='matches'>
   <p ng-show="!matches" class="dogname white_blk_bor"> This page will show your previous matches. Right now you don't have any! </p>
+  <img class="bob" src="../assets/barker.png"></img>
   <div class="row match white_blk_bor" ng-repeat="match in matches track by $index">
     <img class="col-md-2" src="{{ match.images[0] }}"></img>
-    <div class="col-md-10">
+    <div class="col-md-8">
       <h3>{{ match.name }} - {{ match.description }}</h3>
       <h4>{{ match.host.name }} - <a ng-show="match.host.website" href="{{ match.host.website ]}">{{ match.host.website }}</a></h4>
     </div>
+    <div class="col-md-2"></div>
   </div>
 </div>
