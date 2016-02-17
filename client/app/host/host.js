@@ -2,6 +2,7 @@ angular.module( 'barkr.host', [] )
 
 .controller( 'HostController', function( $scope, Find ) {
   $scope.newdog = {};
+  var vm = this;
 
   Find.allDogs( function( dogs ) {
     $scope.dogs = dogs;

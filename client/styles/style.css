@@ -34,7 +34,7 @@ body {
 
 #find {
   overflow: hidden;
-  height: 800px;
+  height: 900px;
 }
 
 #matches {
@@ -47,9 +47,9 @@ body {
 }
 
 .match_btn {
-  border-style: solid;
+  border-style: dotted;
   border-width: 3px;
-  border-color: black;
+  border-color: white;
   border-radius: 40%;
   position: absolute;
   top: 30%;
@@ -59,12 +59,12 @@ body {
 
 .like {
   right: -40px;
-  background-color: green;
+  background-color: #00cca3;
 }
 
 .skip {
   left: -40px;
-  background-color: red;
+  background-color: #ff5050;
 }
 
 .container {
@@ -87,9 +87,17 @@ body {
   height: 100%;
   width: auto;
   float: left;
+  -webkit-transition: -webkit-transform 2s;
+  transition: transform 2s;
+}
+
+.gallery_image:hover {
+  transform: translateX( 400px ) translateY( -300px ) scale( 4 );
 }
 
 .dogname {
+  font-size: 3em;
+  font-family: Impact, Charcoal, sans-serif;
   margin-left: 25px;
   position: absolute;
   top: 5%;
@@ -112,7 +120,7 @@ body {
 
 .watermark {
   top: 0px;
-  font-size: .5em;
+  font-size: .6em;
   margin: 0;
   position: fixed;
   font-style: italic;
@@ -138,6 +146,8 @@ html.ng-scope {
 }
 
 .full_splash {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
   margin: 0;
   width: 100%;
 }

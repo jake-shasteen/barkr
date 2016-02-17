@@ -21,7 +21,7 @@ module.exports = function ( app, express ) {
   /* USERS */
   app.get( '/api/users', userController.showAll );
   app.get( '/api/users/:id', userController.showOne );
-  app.put( 'api/users/:id', userController.editOne );
+  app.put( '/api/users/:id', userController.editOne );
   app.post( '/api/users', userController.addOne );
 
 
