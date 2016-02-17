@@ -1,4 +1,4 @@
-<div id='find'>
+<div id='find' ng-show="dog.id">
   <img class="full_splash" src="{{ dog.primaryImage }}"></img>
   <h2 class="dogname white_blk_bor">{{ dog.name }}</h2>
   <h3 class="distance white_blk_bor">{{ dog.distance }}</h3>
@@ -8,4 +8,7 @@
   <div class="gallery">
     <img class="gallery_image" ng-repeat="image in dog.images" src="{{ image }}"><img>
   </div>
+</div>
+<div class="dogname white_blk_bor" ng-show="!dog.id">
+  <p>No more dogs :(</p>
 </div>

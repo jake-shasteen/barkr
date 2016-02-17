@@ -55,9 +55,13 @@ angular.module( 'barkr.services', [] )
   var unMatchedDog = function( userid, callback ) {
     Match.unMatchedDogIds( userid, function( dogIds ) {
       var pickDog = Math.floor( Math.random() * dogIds.length );
-      oneDog( dogIds[pickDog], function( dog ) {
-        callback( dog );
-      });
+      if( dogIds.length > 0 ) {
+        oneDog( dogIds[pickDog], function( dog ) {
+          callback( dog );
+        });
+      } else {
+        callback({ images: [], host: {} });
+      }
     });
   }
 
