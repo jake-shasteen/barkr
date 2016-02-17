@@ -113,6 +113,10 @@ body {
   font-style: italic;
 }
 
+.edit_dog {
+  font-size: 1ch;
+}
+
 html.ng-scope {
   padding: 0;
   margin: 0;

@@ -1,5 +1,17 @@
 angular.module( 'barkr.host', [] )
 
-.controller( 'HostController', function( $scope ) {
-  $scope.dogs = [ 1, 2, 3, 4, 5 ];
+.controller( 'HostController', function( $scope, Find ) {
+  $scope.newdog = {};
+
+  Find.allDogs( function( dogs ) {
+    $scope.dogs = dogs;
+  });
+
+  $scope.submitForm = function() {
+
+  };
+
+  $scope.submitAddDog = function() {
+
+  };
 });
