@@ -1,6 +1,7 @@
 angular.module( 'barkr', [
   'barkr.find',
   'barkr.matches',
+  'barkr.host',
   'barkr.services',
   'ui.bootstrap',
   'ngRoute'
@@ -19,6 +20,10 @@ angular.module( 'barkr', [
     .when( '/congrats', {
       templateUrl: 'app/congrats/congrats.html',
       controller: 'CongratsController'
+    })
+    .when( '/host', {
+      templateUrl: 'app/host/host.html',
+      controller: 'HostController'
     })
     .otherwise({
       redirectTo: '/find'

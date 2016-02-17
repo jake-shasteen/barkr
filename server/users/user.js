@@ -26,6 +26,12 @@ var User = db.define( 'user', {
 
 User.sync().then( function() {
   console.log( "Table created:", User );
+  // only for demo purposes
+  return User.create({
+    'name': 'Jake',
+    'description': 'Some guy who likes dogs'
+  })
+  // end demo
 } )
 .catch( function( err ) {
   console.error( err );
